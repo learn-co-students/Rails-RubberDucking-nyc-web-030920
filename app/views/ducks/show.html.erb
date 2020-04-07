@@ -1,0 +1,14 @@
+<h1>Duck Show Page</h1>
+
+<div class="show-body">
+  <h2>NAME: <%= @duck.name %></h2>
+  <p><b>DESCRIPTION:</b><%= @duck.description %></p>
+  <%= link_to "Edit This Duck", edit_duck_path(@duck)  %>
+
+<h2>Student that loves me</h2>
+
+  <%= link_to @duck.student.name, @duck.student %>
+  
+   
+
+</div>

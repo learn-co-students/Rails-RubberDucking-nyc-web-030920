@@ -1,0 +1,14 @@
+<h1> One Of the Duck </h1>
+
+<%= @duck.name%>  <%=link_to "#{@duck.name}'s student", student_path(@duck.student) %>
+
+<br>
+
+<%= @duck.description%><br>
+
+<%=button_to "DELETE DUCK", duck_path(@duck), method: :delete %><br>
+<%=link_to "UPDATE DUCK", edit_duck_path(@duck) %>
+
+
+
+

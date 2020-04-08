@@ -1,7 +1,9 @@
 <h1>These are some cool duckys:</h1>
 
+<%= button_to "Create a Duck",  new_duck_path, method: :get%>
+
 <ul>
   <% @ducks.each do |duck| %>
-    <li> <%= duck.name %> </li>
+   <hr> <li> <%= duck.name %> <%= button_to "Duck's Page", duck_path(duck), method: :get %> </hr> </li> 
   <% end %>
 </ul>

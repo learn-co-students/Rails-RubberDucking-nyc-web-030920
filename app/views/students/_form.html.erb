@@ -1,0 +1,19 @@
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error| %>
+            <li><%= error %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @student do |f| %>
+        <%= f.label "Name:" %>
+        <%= f.text_field :name %><br><br>
+
+        <%= f.label "Mod:" %>
+        <%= f.text_field :mod %><br><br>
+
+        <%= f.submit %>
+    <% end %>
+
+    <%= button_to "Return to Homepage", students_path, method: :get %>

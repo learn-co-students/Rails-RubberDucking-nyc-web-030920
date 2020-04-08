@@ -1,0 +1,21 @@
+<h1> <%= @student.name %>'s Page </h1><br>
+
+<h2> Current Mod </h2>
+
+Mod: <%= @student.mod %>
+
+<h2> All Rubber Duckies </h2>
+
+<% @student.ducks.each do |duck| %>
+<%= link_to duck.name, duck_path(duck)  %>
+<% end %>
+
+<ul>
+
+
+</ul>
+
+
+<%= button_to "Edit Student", edit_student_path, method: :get %>
+<%= button_to "Return to Homepage", students_path, method: :get %>
+

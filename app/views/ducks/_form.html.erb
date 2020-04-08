@@ -1,0 +1,22 @@
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error| %>
+            <li><%= error %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @duck do |f| %>
+<%= f.label "Name:" %>
+<%= f.text_field :name %>
+
+<%= f.label "Description:" %>
+<%= f.text_field :description %>
+
+<%= f.collection_select :student_id, Student.all, :id, :name, {prompt: "Select a Student"}%>
+
+<%= f.submit %>
+<% end %>
+
+
+<%= button_to "Return to Homepage", ducks_path, method: :get %>

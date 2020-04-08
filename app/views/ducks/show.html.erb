@@ -1,0 +1,14 @@
+<h1> <%= @duck.name.titleize %>'s Page <h1>
+
+<h2> Description: <h2>
+
+<h3> <%= @duck.description %> </h3>
+
+<h2> Owner of Duck: </h2>
+
+
+<%= link_to @duck.student.name, student_path(@duck.student_id) %><br><br>
+
+<%= button_to "Return to Homepage", ducks_path, method: :get %>
+<%= button_to "Edit Duck", edit_duck_path, method: :get %>
+

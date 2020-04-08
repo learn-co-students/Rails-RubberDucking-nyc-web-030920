@@ -1,0 +1,12 @@
+<%= form_for @duck do |f| %>
+    <%= f.label 'Name:' %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label 'Description:' %>
+    <%= f.text_area :description %>
+    <br>
+    <%= f.label 'Student ID:' %>
+    <%= f.number_field :student_id %>
+    <br>
+    <%= f.submit %>
+<% end %>

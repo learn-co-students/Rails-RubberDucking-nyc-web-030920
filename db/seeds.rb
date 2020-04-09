@@ -8,5 +8,5 @@ Duck.destroy_all
 end
 
 5.times do
-  Duck.create(name: Faker::Creature::Dog.name  , description: Faker::Creature::Dog.breed , student_id: Student.all.sample.id )
+  Duck.create(name: Faker::Creature::Horse.name , description: Faker::Creature::Dog.breed , student_id: Student.all.sample.id )
 end

@@ -16,7 +16,7 @@
 <%=f.text_field :description %>
 <br>
 
-<%=f.collection_select :student_id, Student.all, :id, :name %><br>
+<p><%=f.collection_select :student_id, Student.all, :id, :name %>    :Student Name that you want to match with the duck</p>  <br>
 <%=f.submit%>
 <br>
 <% end %>
